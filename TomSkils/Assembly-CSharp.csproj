@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Action\Action.cs" />
+    <Compile Include="Assets\Scripts\Action\ActionParallel.cs" />
     <Compile Include="Assets\Scripts\Action\ActionSequence.cs" />
     <Compile Include="Assets\Scripts\Action\ActionTestScript.cs" />
     <Compile Include="Assets\Scripts\Action\LerpAction.cs" />
@@ -74,14 +75,32 @@
     <Compile Include="Assets\Scripts\Champion\ChampionCamera.cs" />
     <Compile Include="Assets\Scripts\Champion\ChampionMovement.cs" />
     <Compile Include="Assets\Scripts\Champion\ChampionSkills.cs" />
+    <Compile Include="Assets\Scripts\Champion\Effects\DamageEffect.cs" />
+    <Compile Include="Assets\Scripts\Champion\Effects\Effect.cs" />
+    <Compile Include="Assets\Scripts\Champion\Effects\PermanentEffect.cs" />
+    <Compile Include="Assets\Scripts\Champion\Effects\TimeEffect.cs" />
+    <Compile Include="Assets\Scripts\Champion\Stats\Armor.cs" />
+    <Compile Include="Assets\Scripts\Champion\Stats\ChampionStats.cs" />
+    <Compile Include="Assets\Scripts\Champion\Stats\Healthpoints.cs" />
+    <Compile Include="Assets\Scripts\Champion\Stats\Magicresist.cs" />
+    <Compile Include="Assets\Scripts\Champion\Stats\MovementSpeed.cs" />
+    <Compile Include="Assets\Scripts\Champion\Stats\StatType.cs" />
+    <Compile Include="Assets\Scripts\Champion\Stats\StatValue.cs" />
     <Compile Include="Assets\Scripts\Environment.cs" />
+    <Compile Include="Assets\Scripts\RunTimeVariables\FloatReference.cs" />
+    <Compile Include="Assets\Scripts\RunTimeVariables\FloatVariable.cs" />
+    <Compile Include="Assets\Scripts\RunTimeVariables\RaycastHitVariable.cs" />
+    <Compile Include="Assets\Scripts\RunTimeVariables\Variable.cs" />
+    <Compile Include="Assets\Scripts\Skills\MouseDirection\MouseDirectionSkill.cs" />
+    <Compile Include="Assets\Scripts\Skills\MouseDirection\Projectile\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Skills\MouseDirection\Projectile\ProjectileData.cs" />
+    <Compile Include="Assets\Scripts\Skills\MouseDirection\Projectile\ProjectileSkill.cs" />
     <Compile Include="Assets\Scripts\Skills\PointAndClickSkill.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <Compile Include="Assets\Scripts\Skills\SkillSlot.cs" />
     <Compile Include="Assets\Scripts\Skills\SuperSkill.cs" />
     <Compile Include="Assets\Scripts\Skills\TestPaC.cs" />
     <Compile Include="Assets\Scripts\Skills\TestSkill.cs" />
-    <Compile Include="Assets\Scripts\SkillSlotUI.cs" />
     <Compile Include="Assets\Scripts\Systems\EventSystem\Events.cs" />
     <Compile Include="Assets\Scripts\Systems\EventSystem\EventSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\EventSystem\IBaseEventListener.cs" />
@@ -90,33 +109,35 @@
     <Compile Include="Assets\Scripts\Systems\SelectSystem\SelectSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\SOSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\SystemUpdater.cs" />
+    <Compile Include="Assets\Scripts\UI\CastBar.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillSlotUI.cs" />
     <None Include="Assets\TextureMaker\Shaders\shader_rectangle.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/GitHub/TomSkils/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/GitHub/TomSkils/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/GitHub/TomSkils/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/GitHub/TomSkils/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/GitHub/TomSkils/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/GitHub/TomSkils/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/GitHub/TomSkils/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/GitHub/TomSkils/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/GitHub/TomSkils/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/UnityHub/Editors/2019.2.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

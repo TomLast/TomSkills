@@ -16,3 +16,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   eventSystem: {fileID: 11400000, guid: 6f0e7801e4f513043801c84d6719e5c3, type: 2}
+  raycastHitVariable: {fileID: 11400000, guid: 1d8fe6cd39590dd41b8667e502dae5c8, type: 2}

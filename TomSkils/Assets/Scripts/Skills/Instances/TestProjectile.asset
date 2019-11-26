@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5206d41da51e37449830f306b459fb0, type: 3}
+  m_Name: TestProjectile
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 0}
+  Cooldown: 0
+  CastTime: 0
+  raycastHit: {fileID: 11400000, guid: 1d8fe6cd39590dd41b8667e502dae5c8, type: 2}
+  ProjectilePrefab: {fileID: 2950931186864142903, guid: 53e4c724be1cfe740bb39044ef87be02,
+    type: 3}

@@ -13,20 +13,31 @@ namespace TomSkills
         private Image img;
         private float skillCooldown;
 
-        private void Start()
+        private void Awake()
         {
-            eventSystem.AddListener<Events.SkillSlotUsedEvent>(SkillUsed);
             img = GetComponent<Image>();
+            eventSystem.AddListener<Events.SkillSlotUsedEvent>(SkillUsed);
+            eventSystem.AddListener<Events.SkillSlotUpdate>(UpdateUI);
+        }
+
+        public void UpdateUI(Events.BaseEvent e)
+        {
+            Events.SkillSlotUpdate update = (Events.SkillSlotUpdate)e;
+            if(update.SkillSlotID == SlotID)
+            {
+                img.sprite = update.Skill.Icon;
+            }
         }
 
         public void SkillUsed(Events.BaseEvent e)
         {
             Events.SkillSlotUsedEvent skillSlotUsedEvent = (Events.SkillSlotUsedEvent)e;
             if (skillSlotUsedEvent.SkillSlotID != SlotID) return;
+
             skillCooldown = skillSlotUsedEvent.Skill.Cooldown;
             if (skillCooldown == 0) return;
+
             StartCoroutine(Tasks.LerpHandle(skillCooldown, SetFillAmount));
-            //StartCoroutine(Tasks.TickHandle(skillCooldown, 1f, SetFillAmount, ()=>img.fillAmount = 0f));
         }
 
         private void SetFillAmount(float t) => img.fillAmount = Mathf.Lerp(0, 1, t);

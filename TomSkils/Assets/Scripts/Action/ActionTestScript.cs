@@ -7,6 +7,7 @@ public class ActionTestScript : MonoBehaviour
     private Action action;
     private Action action2;
     public Action seq;
+    public Action par;
     private Vector3 start;
     private float counter;
     IEnumerator actionHandle;
@@ -18,6 +19,7 @@ public class ActionTestScript : MonoBehaviour
         //action2 = new TimeAction(CounterCheck, Count, () => { Debug.Log("Start 2"); counter = 0f; }, () => { Debug.Log(action.State); });
         action2 = new LerpAction(MoveCheck, Move, 5f, () => { Debug.Log("Start"); }, () => { Debug.Log(action.State); });
         seq = new ActionSequence(new List<Action>() { action, action2 }, this);
+        par = new ActionParallel(new List<Action>() { action, action2 }, this);
         //action = new TickAction(CounterCheck, Move, 1f,5f, () => { Debug.Log("Start"); transform.position = Vector3.zero; }, () => { Debug.Log(action.State); });
     }
 
@@ -25,7 +27,7 @@ public class ActionTestScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(seq.Execute());
+            StartCoroutine(par.Execute());
         }
     }
 
@@ -41,6 +43,6 @@ public class ActionTestScript : MonoBehaviour
 
     private ActionState CounterCheck()
     {
-        return counter >= 5f ? ActionState.SUCCESS : ActionState.RUNNING;
+        return counter >= 10f ? ActionState.SUCCESS : ActionState.RUNNING;
     }
 }

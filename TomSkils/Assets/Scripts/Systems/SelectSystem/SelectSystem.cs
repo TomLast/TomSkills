@@ -7,6 +7,7 @@ namespace TomSkills
     {
         public LayerMask selectableLayer;
         public EventSystem eventSystem;
+        public RaycastHitVariable raycastHitVariable;
 
         private Ray ray;
         private RaycastHit hit;
@@ -16,29 +17,30 @@ namespace TomSkills
         {
             base.Init(mb);
             camera = Camera.main;
-            eventSystem?.AddListener<Events.KeyDownEvent>(Raycast);
+            eventSystem?.AddListener<Events.KeyDownEvent>(SelectObject);
         }
 
         public override void Update()
         {
-
+            ray = camera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                raycastHitVariable.Value = hit;
+            }
+            else
+                raycastHitVariable.Value = default;
         }
 
-        public void Raycast(Events.BaseEvent e)
+        public void SelectObject(Events.BaseEvent e)
         {
             Events.KeyDownEvent keyEvent = (Events.KeyDownEvent)e;
             if (keyEvent.Value == KeyCode.Mouse0 || keyEvent.Value == KeyCode.Mouse1)
             {
-                ray = camera.ScreenPointToRay(Input.mousePosition);
+                ISelectable selectable = hit.collider.gameObject.GetComponent<ISelectable>();
 
-                if (Physics.Raycast(ray, out hit))
+                if (selectable != null)
                 {
-                    ISelectable selectable = hit.collider.gameObject.GetComponent<ISelectable>();
-
-                    if (selectable != null)
-                    {
-                        selectable.OnSelected(hit.point, Input.GetMouseButtonDown(0) ? KeyCode.Mouse0 : KeyCode.Mouse1);
-                    }
+                    selectable.OnSelected(hit.point, Input.GetMouseButtonDown(0) ? KeyCode.Mouse0 : KeyCode.Mouse1);
                 }
             }
         }

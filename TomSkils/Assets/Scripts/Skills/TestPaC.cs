@@ -7,9 +7,10 @@ namespace TomSkills
     [CreateAssetMenu]
     public class TestPaC : PointAndClickSkill
     {
-        protected override void PaCSkill()
+        protected override void PaCSkill(GameObject target)
         {
-            target.GetComponent<MeshRenderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+            if(target.GetComponent<Champion>() != null)
+                target.GetComponent<MeshRenderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
         }
     }
 }

@@ -7,9 +7,11 @@ namespace TomSkills
     public class Champion : MonoBehaviour, ISelectable
     {
         public bool IsUsingSelectSkill { get; set; } = false;
-        public float PaCRadius;
+        public float PaCRadius { get; set; }
+        public ChampionStats Stats;
+        public Effect speed;
         [SerializeField] private EventSystem eventSystem;
-
+        
         private Events.GameObjectClickedEvent clickedEvent;
 
         private void Start()
@@ -17,6 +19,13 @@ namespace TomSkills
             clickedEvent = new Events.GameObjectClickedEvent();
             clickedEvent.Value = gameObject;
         }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+                speed.Use<Healthpoints>(this, Stats.GetStatValue<Healthpoints>());
+        }
+
         public void OnSelected(Vector3 point, KeyCode key)
         {
             if(key == KeyCode.Mouse0)

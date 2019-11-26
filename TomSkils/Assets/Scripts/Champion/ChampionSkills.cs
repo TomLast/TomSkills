@@ -9,7 +9,7 @@ namespace TomSkills
         [SerializeField] private EventSystem eventSystem;
         [SerializeField] private List<SkillSlot> skillSlots = new List<SkillSlot>();
 
-        private void Awake()
+        private void Start()
         {
             if (eventSystem == null) return;
 

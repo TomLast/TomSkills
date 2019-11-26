@@ -20,6 +20,10 @@ namespace TomSkills
         {
             usedEvent = new Events.SkillSlotUsedEvent();
             usedEvent.SkillSlotID = ID;
+            Events.SkillSlotUpdate update = new Events.SkillSlotUpdate();
+            update.Skill = skill;
+            update.SkillSlotID = ID;
+            eventSystem.RaiseEvent<Events.SkillSlotUpdate>(update);
         }
 
         public void Use(Events.BaseEvent e)

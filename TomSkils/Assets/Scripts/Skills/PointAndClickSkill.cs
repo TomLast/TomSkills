@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TomSkills
 {
@@ -9,36 +7,28 @@ namespace TomSkills
         public EventSystem eventSystem;
         public float SelectRadius;
 
-        protected GameObject target;
         protected Champion caster;
 
         public override void Use(Champion caster)
         {
             if (this.caster == null) this.caster = caster;
-            target = null;
             caster.IsUsingSelectSkill = true;
             caster.PaCRadius = SelectRadius;
             eventSystem?.AddListener<Events.GameObjectClickedEvent>(UseSkill);
 
         }
 
-        protected abstract void PaCSkill();
+        protected abstract void PaCSkill(GameObject target);
 
         private void UseSkill(Events.BaseEvent e)
         {
             Events.GameObjectClickedEvent gameObjectEvent = (Events.GameObjectClickedEvent)e;
 
-            if (gameObjectEvent.Value.GetComponent<Champion>() != null)
-            {
-                Debug.Log("Champion Target");
-                target = gameObjectEvent.Value;
-            }
-
-            if (target != null && (target.transform.position - caster.transform.position).magnitude <= SelectRadius)
+            if ((gameObjectEvent.Value.transform.position - caster.transform.position).magnitude <= SelectRadius)
             {
                 Debug.Log("Target set and in Range");
 
-                PaCSkill();
+                PaCSkill(gameObjectEvent.Value);
             }
             caster.IsUsingSelectSkill = false;
             eventSystem?.RemoveListener<Events.GameObjectClickedEvent>(UseSkill);

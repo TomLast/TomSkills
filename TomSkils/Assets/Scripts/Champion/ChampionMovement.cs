@@ -10,14 +10,14 @@ namespace TomSkills
     {
         public EventSystem eventSystem;
 
-        [SerializeField] private float speed;
-
         private NavMeshAgent navMeshAgent;
+        private FloatReference movementSpeed;
 
         public void Awake()
         {
             eventSystem?.AddListener<Events.GameObjectClickedEvent>(Move);
             navMeshAgent = GetComponent<NavMeshAgent>();
+            movementSpeed = GetComponent<Champion>().Stats.GetStatValue<MovementSpeed>();
         }
 
         private void Move(Events.BaseEvent e)
@@ -26,6 +26,7 @@ namespace TomSkills
             if (clickedEvent.mouseKey == KeyCode.Mouse0) return;
             if(clickedEvent.Value.tag == "Ground")
             {
+                navMeshAgent.speed = movementSpeed.Value;
                 navMeshAgent.SetDestination(clickedEvent.pos);
             }
         }

@@ -28,5 +28,11 @@ namespace TomSkills
             public Skill Skill;
             public int SkillSlotID;
         }
+
+        public class SkillSlotUpdate : BaseEvent
+        {
+            public Skill Skill;
+            public int SkillSlotID;
+        }
     }
 }

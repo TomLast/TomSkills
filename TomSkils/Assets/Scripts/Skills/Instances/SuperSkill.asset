@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edff60c00521fc447bc3d9a48d379a73, type: 3}
   m_Name: SuperSkill
   m_EditorClassIdentifier: 
+  Icon: {fileID: 0}
+  Cooldown: 0
+  CastTime: 0
+  raycastHit: {fileID: 11400000, guid: 1d8fe6cd39590dd41b8667e502dae5c8, type: 2}
