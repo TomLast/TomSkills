@@ -9,7 +9,8 @@ namespace TomSkills
         public bool IsUsingSelectSkill { get; set; } = false;
         public float PaCRadius { get; set; }
         public ChampionStats Stats;
-        public Effect speed;
+        public Effect effect;
+
         [SerializeField] private EventSystem eventSystem;
         
         private Events.GameObjectClickedEvent clickedEvent;
@@ -23,7 +24,7 @@ namespace TomSkills
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
-                speed.Use<Healthpoints>(this, Stats.GetStatValue<Healthpoints>());
+                effect.Use<MovementSpeed>(this, Stats.GetStatValue<MovementSpeed>());
         }
 
         public void OnSelected(Vector3 point, KeyCode key)

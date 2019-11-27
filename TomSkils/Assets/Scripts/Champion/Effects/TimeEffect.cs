@@ -9,6 +9,7 @@ public class TimeEffect : Effect
     public float Duration;
 
     private IEnumerator effectHandle;
+
     public override void Use<T>(Champion caster, FloatReference stat)
     {
         base.Use<T>(caster, stat);

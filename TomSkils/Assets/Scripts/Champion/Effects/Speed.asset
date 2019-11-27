@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a134f25efb2d91748bb8bc0a9c69dbdd, type: 3}
   m_Name: Speed
   m_EditorClassIdentifier: 
-  EffectingStats: {fileID: 0}
-  Value: 0
-  isValuePercentage: 0
-  Duration: 0
+  EffectingStats: {fileID: 11400000, guid: 242f85bc40c5f3342bc68707a14e7182, type: 2}
+  Value: 50
+  isValuePercentage: 1
+  Duration: 5

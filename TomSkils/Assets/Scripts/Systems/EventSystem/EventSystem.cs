@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,9 +11,7 @@ namespace TomSkills
 
         private Dictionary<Type, List<EventListener>> eventListeners = new Dictionary<Type, List<EventListener>>();
 
-        public override void Update()
-        {
-        }
+        public override void Update() { }
 
         public void RaiseEvent<T>(Events.BaseEvent e) where T : Events.BaseEvent
         {
@@ -34,22 +31,16 @@ namespace TomSkills
                 return;
             }
             if (!eventListeners[typeof(T)].Contains(listener))
-            {
-                //Debug.Log($"Type {typeof(T)} has {eventListeners[typeof(T)].Count} listeners");
                 eventListeners[typeof(T)].Add(listener);
-            }
         }
 
         public void RemoveListener<T>(EventListener listener)
         {
             if (!eventListeners.ContainsKey(typeof(T)))
-            {
                 return;
-            }
+
             if (eventListeners[typeof(T)].Contains(listener))
-            {
                 eventListeners[typeof(T)].Remove(listener);
-            }
         }
     }
 }

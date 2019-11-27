@@ -89,8 +89,11 @@
     <Compile Include="Assets\Scripts\Environment.cs" />
     <Compile Include="Assets\Scripts\RunTimeVariables\FloatReference.cs" />
     <Compile Include="Assets\Scripts\RunTimeVariables\FloatVariable.cs" />
+    <Compile Include="Assets\Scripts\RunTimeVariables\IntVariable.cs" />
     <Compile Include="Assets\Scripts\RunTimeVariables\RaycastHitVariable.cs" />
     <Compile Include="Assets\Scripts\RunTimeVariables\Variable.cs" />
+    <Compile Include="Assets\Scripts\RunTimeVariables\VariableReference.cs" />
+    <Compile Include="Assets\Scripts\Skills\Damage.cs" />
     <Compile Include="Assets\Scripts\Skills\MouseDirection\MouseDirectionSkill.cs" />
     <Compile Include="Assets\Scripts\Skills\MouseDirection\Projectile\Projectile.cs" />
     <Compile Include="Assets\Scripts\Skills\MouseDirection\Projectile\ProjectileData.cs" />
@@ -103,7 +106,6 @@
     <Compile Include="Assets\Scripts\Skills\TestSkill.cs" />
     <Compile Include="Assets\Scripts\Systems\EventSystem\Events.cs" />
     <Compile Include="Assets\Scripts\Systems\EventSystem\EventSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\EventSystem\IBaseEventListener.cs" />
     <Compile Include="Assets\Scripts\Systems\InputSystem\InputSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\SelectSystem\ISelectable.cs" />
     <Compile Include="Assets\Scripts\Systems\SelectSystem\SelectSystem.cs" />

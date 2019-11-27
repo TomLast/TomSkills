@@ -16,7 +16,7 @@ MonoBehaviour:
   - StatType: {fileID: 11400000, guid: 920be92346417e94c880b356a7a990e2, type: 2}
     Value:
       UseConstant: 1
-      ConstantValue: 0
+      ConstantValue: 24
       Variable: {fileID: 0}
   - StatType: {fileID: 11400000, guid: fa85131b63b5b774b9827c902253e49c, type: 2}
     Value:

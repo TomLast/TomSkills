@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
-public class FloatReference
+﻿[System.Serializable]
+public class FloatReference// : VariableReference<float>
 {
     public bool UseConstant = true;
     public float ConstantValue;
