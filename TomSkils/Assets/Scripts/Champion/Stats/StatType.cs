@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public abstract class StatType : ScriptableObject{}
+[CreateAssetMenu(fileName ="StatType", menuName = "ChampionStats/Type")]
+public class StatType : ScriptableObject{}

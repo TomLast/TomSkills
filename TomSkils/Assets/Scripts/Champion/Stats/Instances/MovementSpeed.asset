@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1fc4dd86cf6b5446b0c4a9afc336047, type: 3}
+  m_Script: {fileID: 11500000, guid: 2256094df640052438df073490b1fd34, type: 3}
   m_Name: MovementSpeed
   m_EditorClassIdentifier: 

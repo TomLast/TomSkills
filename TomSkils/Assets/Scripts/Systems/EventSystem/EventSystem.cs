@@ -11,8 +11,6 @@ namespace TomSkills
 
         private Dictionary<Type, List<EventListener>> eventListeners = new Dictionary<Type, List<EventListener>>();
 
-        public override void Update() { }
-
         public void RaiseEvent<T>(Events.BaseEvent e) where T : Events.BaseEvent
         {
             if (!eventListeners.ContainsKey(e.GetType())) return;

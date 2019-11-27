@@ -13,11 +13,12 @@ namespace TomSkills
         private RaycastHit hit;
         private Camera camera;
 
-        public override void Init(MonoBehaviour mb)
+        public override void Init(SystemUpdater mb)
         {
             base.Init(mb);
             camera = Camera.main;
             eventSystem?.AddListener<Events.KeyDownEvent>(SelectObject);
+            mb.AddToUpdate(this);
         }
 
         public override void Update()

@@ -9,15 +9,16 @@ namespace TomSkills
     public class ChampionMovement : MonoBehaviour
     {
         public EventSystem eventSystem;
+        public StatType MovementSpeed;
 
         private NavMeshAgent navMeshAgent;
-        private FloatReference movementSpeed;
+        private IntReference movementSpeed;
 
         public void Awake()
         {
             eventSystem?.AddListener<Events.GameObjectClickedEvent>(Move);
             navMeshAgent = GetComponent<NavMeshAgent>();
-            movementSpeed = GetComponent<Champion>().Stats.GetStatValue<MovementSpeed>();
+            movementSpeed = GetComponent<Champion>().Stats.GetStatValue(MovementSpeed);
         }
 
         private void Move(Events.BaseEvent e)

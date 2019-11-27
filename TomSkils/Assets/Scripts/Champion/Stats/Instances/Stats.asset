@@ -13,23 +13,33 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   StatValues:
-  - StatType: {fileID: 11400000, guid: 920be92346417e94c880b356a7a990e2, type: 2}
+  - StatType: {fileID: 11400000, guid: 124269a384c22d2459071f2aa450a162, type: 2}
     Value:
       UseConstant: 1
-      ConstantValue: 24
+      ConstantValue: 850
       Variable: {fileID: 0}
-  - StatType: {fileID: 11400000, guid: fa85131b63b5b774b9827c902253e49c, type: 2}
+  - StatType: {fileID: 11400000, guid: bf355bd8af0380a42925cf6ee71c464d, type: 2}
     Value:
       UseConstant: 1
-      ConstantValue: 0
+      ConstantValue: 50
       Variable: {fileID: 0}
-  - StatType: {fileID: 11400000, guid: 0b180d3a0c17e334c8aa7a9534bafb74, type: 2}
+  - StatType: {fileID: 11400000, guid: feaf223885c53df468cc500ab130a65e, type: 2}
     Value:
-      UseConstant: 1
-      ConstantValue: 0
+      UseConstant: 0
+      ConstantValue: 100
       Variable: {fileID: 0}
-  - StatType: {fileID: 11400000, guid: 242f85bc40c5f3342bc68707a14e7182, type: 2}
+  - StatType: {fileID: 11400000, guid: fe8ac12f13b4214418a22bbc249c6f12, type: 2}
     Value:
       UseConstant: 1
-      ConstantValue: 10
+      ConstantValue: 50
+      Variable: {fileID: 0}
+  - StatType: {fileID: 11400000, guid: 7abcb518bbfbbbe4e9753865205ed65e, type: 2}
+    Value:
+      UseConstant: 0
+      ConstantValue: 50
+      Variable: {fileID: 0}
+  - StatType: {fileID: 11400000, guid: c9fd9274def67854b9a2db5a2aed2015, type: 2}
+    Value:
+      UseConstant: 1
+      ConstantValue: 55
       Variable: {fileID: 0}

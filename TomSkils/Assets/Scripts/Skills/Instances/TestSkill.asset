@@ -15,3 +15,14 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 31a9d644bf9df384b9bded668253065b, type: 3}
   Cooldown: 3
   CastTime: 2
+  Effects:
+  - Effect: {fileID: 11400000, guid: 7591538e23fdbc4498883e9382e4a453, type: 2}
+    Value:
+      UseConstant: 1
+      ConstantValue: 10
+      Variable: {fileID: 0}
+  - Effect: {fileID: 11400000, guid: 98255586957ed6846864575d59169e26, type: 2}
+    Value:
+      UseConstant: 1
+      ConstantValue: 100
+      Variable: {fileID: 0}

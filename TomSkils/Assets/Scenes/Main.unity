@@ -462,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 11400000, guid: 6f0e7801e4f513043801c84d6719e5c3, type: 2}
+  MovementSpeed: {fileID: 11400000, guid: c9fd9274def67854b9a2db5a2aed2015, type: 2}
 --- !u!54 &528956548
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -516,8 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f8824d1a8b63a4ea04afee3c844823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stats: {fileID: 11400000, guid: c4ab567c7d9167a46a1f5e28bf3bcde4, type: 2}
-  effect: {fileID: 11400000, guid: 89a6f15658f3dbd4ab7be457cf8598a0, type: 2}
+  Stats: {fileID: 11400000, guid: 87d2460b44cc2894390a77dbbe613246, type: 2}
   eventSystem: {fileID: 11400000, guid: 6f0e7801e4f513043801c84d6719e5c3, type: 2}
 --- !u!195 &528956551
 NavMeshAgent:
@@ -1915,7 +1915,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 0}
-  effect: {fileID: 0}
   eventSystem: {fileID: 11400000, guid: 6f0e7801e4f513043801c84d6719e5c3, type: 2}
 --- !u!208 &1631934469
 NavMeshObstacle:

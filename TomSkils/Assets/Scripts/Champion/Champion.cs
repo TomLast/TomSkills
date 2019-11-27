@@ -9,7 +9,6 @@ namespace TomSkills
         public bool IsUsingSelectSkill { get; set; } = false;
         public float PaCRadius { get; set; }
         public ChampionStats Stats;
-        public Effect effect;
 
         [SerializeField] private EventSystem eventSystem;
         
@@ -23,8 +22,7 @@ namespace TomSkills
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-                effect.Use<MovementSpeed>(this, Stats.GetStatValue<MovementSpeed>());
+
         }
 
         public void OnSelected(Vector3 point, KeyCode key)

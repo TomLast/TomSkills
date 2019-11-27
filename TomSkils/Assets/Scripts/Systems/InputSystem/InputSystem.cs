@@ -13,6 +13,12 @@ namespace TomSkills
         private Events.KeyEvent keyEvent = new Events.KeyEvent();
         private Events.KeyDownEvent keyDownEvent = new Events.KeyDownEvent();
 
+        public override void Init(SystemUpdater mb)
+        {
+            base.Init(mb);
+            mb.AddToUpdate(this);
+        }
+
         public override void Update()
         {
             foreach(KeyCode key in keys)
