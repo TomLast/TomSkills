@@ -13,13 +13,13 @@ public class ActionTestScript : MonoBehaviour
     IEnumerator actionHandle;
     private void Start()
     {
-        start = transform.position;
+        //    start = transform.position;
 
-        action = new TimeAction(CounterCheck, Count, () => { Debug.Log("Start 1"); counter = 0f; }, () => { Debug.Log(action.State); });
-        //action2 = new TimeAction(CounterCheck, Count, () => { Debug.Log("Start 2"); counter = 0f; }, () => { Debug.Log(action.State); });
-        action2 = new LerpAction(MoveCheck, Move, 5f, () => { Debug.Log("Start"); }, () => { Debug.Log(action.State); });
-        seq = new ActionSequence(new List<Action>() { action, action2 }, this);
-        par = new ActionParallel(new List<Action>() { action, action2 }, this);
+        //    action = new TimeAction(CounterCheck, Count, () => { Debug.Log("Start 1"); counter = 0f; }, () => { Debug.Log(action.State); });
+        //    //action2 = new TimeAction(CounterCheck, Count, () => { Debug.Log("Start 2"); counter = 0f; }, () => { Debug.Log(action.State); });
+        //    action2 = new LerpAction(MoveCheck, Move, 5f, () => { Debug.Log("Start"); }, () => { Debug.Log(action.State); });
+        //    seq = new ActionSequence(new List<Action>() { action, action2 }, this);
+        //    par = new ActionParallel(new List<Action>() { action, action2 }, this);
         //action = new TickAction(CounterCheck, Move, 1f,5f, () => { Debug.Log("Start"); transform.position = Vector3.zero; }, () => { Debug.Log(action.State); });
     }
 

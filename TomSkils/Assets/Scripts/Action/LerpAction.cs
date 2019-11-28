@@ -1,12 +1,16 @@
-﻿public class LerpAction : Action
+﻿using UnityEngine;
+
+public class LerpAction : Action
 {
     private readonly float duration;
 
     private float progress;
 
-    public LerpAction(ActionStateDel stateCondition, TimeTaskDel task, float duration, Del init = null, Del callback = null) : base(stateCondition, task, init, callback)
+    public LerpAction(TimeTaskDel task, float duration, ActionStateDel stateCondition = null, Del init = null, Del callback = null) : base(stateCondition, task, init, callback)
     {
         this.duration = duration;
+        base.stateCondition = stateCondition ?? Default;
+
     }
 
     protected override void TaskExecute(float t)
@@ -19,4 +23,7 @@
         base.Init();
         progress = 0f;
     }
+
+    private ActionState Default() => progress >= 1f ? ActionState.SUCCESS : ActionState.RUNNING;
+
 }
