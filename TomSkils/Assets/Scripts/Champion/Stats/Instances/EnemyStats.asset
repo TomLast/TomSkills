@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a30f31cec6ee66946904f39b43b63797, type: 3}
-  m_Name: Stats
+  m_Name: EnemyStats
   m_EditorClassIdentifier: 
   StatValues:
   - StatType: {fileID: 11400000, guid: 124269a384c22d2459071f2aa450a162, type: 2}
     Value:
       UseConstant: 1
-      ConstantValue: 600
+      ConstantValue: -350
       Variable: {fileID: 0}
   - StatType: {fileID: 11400000, guid: 350aafe8d79bdbc49a87340ae4045921, type: 2}
     Value:
@@ -41,5 +41,5 @@ MonoBehaviour:
   - StatType: {fileID: 11400000, guid: c9fd9274def67854b9a2db5a2aed2015, type: 2}
     Value:
       UseConstant: 1
-      ConstantValue: 10
+      ConstantValue: -80
       Variable: {fileID: 0}

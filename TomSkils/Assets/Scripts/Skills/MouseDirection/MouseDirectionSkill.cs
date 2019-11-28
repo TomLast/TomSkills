@@ -11,7 +11,7 @@ namespace TomSkills
 
         public override void Use(Champion caster)
         {
-            if (this.caster == null) this.caster = caster;
+            this.caster = caster;
             dirDel((raycastHit.Value.point - caster.transform.position).normalized);
         }
     } 

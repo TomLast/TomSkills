@@ -8,20 +8,40 @@ namespace TomSkills
     public class ProjectileSkill : MouseDirectionSkill
     {
         public GameObject ProjectilePrefab;
+        public List<EffectWrapper> Effects;
+        public EventSystem eventSystem;
+
+        private GameObject projectile;
 
         public override void Use(Champion caster)
         {
-            if (dirDel == null) dirDel = SpawnProjectile;
+            eventSystem.AddListener<Events.OnTriggerEnterEvent>(OnProjectileHit);
+            dirDel = SpawnProjectile;
             base.Use(caster);
         }
 
         private void SpawnProjectile(Vector3 dir)
         {
-            GameObject go = Instantiate(ProjectilePrefab);
-            go.transform.position = caster.transform.position;
-            Projectile p = go.GetComponent<Projectile>();
+            projectile = Instantiate(ProjectilePrefab);
+            projectile.transform.position = caster.transform.position;
+            Projectile p = projectile.GetComponent<Projectile>();
             p.Direction = new Vector3(dir.x, 0, dir.z);
             p.startPos = caster.transform.position;
+        }
+
+        private void OnProjectileHit(Events.BaseEvent e)
+        {
+            Events.OnTriggerEnterEvent enterEvent = (Events.OnTriggerEnterEvent)e;
+            Champion c = enterEvent.Other.GetComponent<Champion>();
+
+            if (c != caster)
+            {
+                Destroy(projectile);
+                foreach (var effect in Effects)
+                {
+                    caster.StartCoroutine(effect.ActionWrapper.Execute(effect.EffectValue, c));
+                }
+            }
         }
     }
 }

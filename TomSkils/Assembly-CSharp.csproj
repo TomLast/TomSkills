@@ -81,6 +81,8 @@
     <Compile Include="Assets\Scripts\Champion\Effects\PermanentEffect.cs" />
     <Compile Include="Assets\Scripts\Champion\Effects\TimeEffect.cs" />
     <Compile Include="Assets\Scripts\Champion\Stats\ChampionStats.cs" />
+    <Compile Include="Assets\Scripts\Champion\Stats\DamageType.cs" />
+    <Compile Include="Assets\Scripts\Champion\Stats\ResistenceType.cs" />
     <Compile Include="Assets\Scripts\Champion\Stats\StatType.cs" />
     <Compile Include="Assets\Scripts\Champion\Stats\StatValue.cs" />
     <Compile Include="Assets\Scripts\Environment.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Assets\Scripts\UI\CastBar.cs" />
     <Compile Include="Assets\Scripts\UI\SkillSlotUI.cs" />
     <None Include="Assets\TextureMaker\Shaders\shader_rectangle.shader" />
+    <None Include="Assets\Resources\Inspector\stats.uxml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

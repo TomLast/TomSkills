@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfce4d83f7814cf4e944f568cf07365d, type: 3}
   m_Name: MagicDamage
   m_EditorClassIdentifier: 
-  Resistence: {fileID: 11400000, guid: 7abcb518bbfbbbe4e9753865205ed65e, type: 2}
+  Resistence: {fileID: 11400000, guid: a5a6bff0353c7f84c8f69d1e275bb016, type: 2}
   HealthType: {fileID: 11400000, guid: 124269a384c22d2459071f2aa450a162, type: 2}

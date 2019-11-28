@@ -23,18 +23,15 @@ public class ActionWrapper
         if (Duration == 0)
         {
             action = new TimeAction(() => ActionState.SUCCESS, Effect, () => { if (ResetAtEnd) appliedAmount = 0; }, () => { if (ResetAtEnd) effect.Effect.Use(target, -appliedAmount) ; });
-            Debug.Log("Instant");
         }
         else if(TickIntervall == 0)
         {
             action = new LerpAction((float t)=> { }, Duration, null, () => { if (ResetAtEnd) appliedAmount = 0; Effect(0f); }, () => { Debug.Log("Reset"); if (ResetAtEnd) effect.Effect.Use(target, -appliedAmount); });
-            Debug.Log("Lerp");
 
         }
         else
         {
             action = new TickAction(Effect, TickIntervall, Duration, null, () => { if (ResetAtEnd) appliedAmount = 0; }, () => { if (ResetAtEnd) effect.Effect.Use(target, -appliedAmount); });
-            Debug.Log("TickAction");
         }
 
         yield return target.StartCoroutine(action.Execute());

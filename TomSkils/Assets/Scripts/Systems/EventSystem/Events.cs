@@ -34,5 +34,11 @@ namespace TomSkills
             public Skill Skill;
             public int SkillSlotID;
         }
+
+        public class OnTriggerEnterEvent : BaseEvent
+        {
+            public Collider TriggetCollider;
+            public Collider Other;
+        }
     }
 }

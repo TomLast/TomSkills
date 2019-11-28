@@ -18,3 +18,25 @@ MonoBehaviour:
   raycastHit: {fileID: 11400000, guid: 1d8fe6cd39590dd41b8667e502dae5c8, type: 2}
   ProjectilePrefab: {fileID: 2950931186864142903, guid: 53e4c724be1cfe740bb39044ef87be02,
     type: 3}
+  Effects:
+  - EffectValue:
+      Effect: {fileID: 11400000, guid: 98255586957ed6846864575d59169e26, type: 2}
+      Value:
+        UseConstant: 1
+        ConstantValue: 200
+        Variable: {fileID: 0}
+    ActionWrapper:
+      Duration: 0
+      TickIntervall: 0
+      ResetAtEnd: 0
+  - EffectValue:
+      Effect: {fileID: 11400000, guid: 7591538e23fdbc4498883e9382e4a453, type: 2}
+      Value:
+        UseConstant: 1
+        ConstantValue: -1
+        Variable: {fileID: 0}
+    ActionWrapper:
+      Duration: 0
+      TickIntervall: 0
+      ResetAtEnd: 0
+  eventSystem: {fileID: 11400000, guid: 6f0e7801e4f513043801c84d6719e5c3, type: 2}
