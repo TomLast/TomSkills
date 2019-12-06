@@ -26,8 +26,6 @@ namespace TomSkills
 
             if ((gameObjectEvent.Value.transform.position - caster.transform.position).magnitude <= SelectRadius)
             {
-                Debug.Log("Target set and in Range");
-
                 PaCSkill(gameObjectEvent.Value);
             }
             caster.IsUsingSelectSkill = false;

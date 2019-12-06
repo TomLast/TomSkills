@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Effect", menuName = "Effects/Damage")]
 public class DamgeEffect : Effect
 {
-    public ResistenceType Resistence;
+    public ResistenceStat Resistence;
     public StatType HealthType;
 
     public override void Use(Champion target, int amount)

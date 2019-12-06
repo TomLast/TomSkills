@@ -9,13 +9,15 @@ namespace TomSkills
         public bool IsUsingSelectSkill { get; set; } = false;
         public float PaCRadius { get; set; }
         public ChampionStats Stats;
-
+        public ChampionActionOptions ActionOptions;
         [SerializeField] private EventSystem eventSystem;
         
         private Events.GameObjectClickedEvent clickedEvent;
 
-        private void Start()
+        private void Awake()
         {
+            Debug.Log(ActionOptions);
+            ActionOptions.caster = this;
             clickedEvent = new Events.GameObjectClickedEvent();
             clickedEvent.Value = gameObject;
         }

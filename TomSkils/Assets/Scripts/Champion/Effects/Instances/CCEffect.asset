@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734f0bcdf5d29a34191f3d2b45fec258, type: 3}
+  m_Name: CCEffect
+  m_EditorClassIdentifier: 
+  CC: {fileID: 11400000, guid: cec4be91fcc563e4dbd761cf89e9ac49, type: 2}

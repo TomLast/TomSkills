@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5206d41da51e37449830f306b459fb0, type: 3}
   m_Name: TestProjectile
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 7028fdf497054aa4b801da4ae2be6ed8, type: 3}
   Cooldown: 0
   CastTime: 0
   raycastHit: {fileID: 11400000, guid: 1d8fe6cd39590dd41b8667e502dae5c8, type: 2}
@@ -34,6 +34,16 @@ MonoBehaviour:
       Value:
         UseConstant: 1
         ConstantValue: -1
+        Variable: {fileID: 0}
+    ActionWrapper:
+      Duration: 0
+      TickIntervall: 0
+      ResetAtEnd: 0
+  - EffectValue:
+      Effect: {fileID: 11400000, guid: 404c330f08357b94fb67392d235cb008, type: 2}
+      Value:
+        UseConstant: 1
+        ConstantValue: 5
         Variable: {fileID: 0}
     ActionWrapper:
       Duration: 0

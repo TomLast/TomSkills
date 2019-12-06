@@ -26,7 +26,7 @@ public class ActionWrapper
         }
         else if(TickIntervall == 0)
         {
-            action = new LerpAction((float t)=> { }, Duration, null, () => { if (ResetAtEnd) appliedAmount = 0; Effect(0f); }, () => { Debug.Log("Reset"); if (ResetAtEnd) effect.Effect.Use(target, -appliedAmount); });
+            action = new LerpAction((float t)=> { }, Duration, null, () => { if (ResetAtEnd) appliedAmount = 0; Effect(0f); }, () => { if (ResetAtEnd) effect.Effect.Use(target, -appliedAmount); });
 
         }
         else

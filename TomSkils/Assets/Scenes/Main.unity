@@ -372,7 +372,7 @@ GameObject:
   m_Layer: 8
   m_Name: Champion
   m_TagString: Champion
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -447,7 +447,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &528956547
 MonoBehaviour:
@@ -518,6 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: 87d2460b44cc2894390a77dbbe613246, type: 2}
+  ActionOptions: {fileID: 11400000, guid: 6ac4df083e4726246addb397885ca342, type: 2}
   eventSystem: {fileID: 11400000, guid: 6f0e7801e4f513043801c84d6719e5c3, type: 2}
 --- !u!195 &528956551
 NavMeshAgent:
@@ -813,7 +814,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &781908157
 GameObject:
@@ -1035,7 +1036,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &945076474
 GameObject:
@@ -1751,7 +1752,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8390e20c6396111429a3ff1126d20f54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1823,9 +1824,9 @@ GameObject:
   - component: {fileID: 1631934469}
   - component: {fileID: 1631934470}
   m_Layer: 8
-  m_Name: Cube
+  m_Name: EnemyChampion
   m_TagString: Champion
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1900,7 +1901,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1631934468
 MonoBehaviour:
@@ -1915,6 +1916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: 20bca7d0dac8624458d402a2dcc9d53a, type: 2}
+  ActionOptions: {fileID: 11400000, guid: 0caa30ca6ce32254dabbe052c23c803d, type: 2}
   eventSystem: {fileID: 11400000, guid: 6f0e7801e4f513043801c84d6719e5c3, type: 2}
 --- !u!208 &1631934469
 NavMeshObstacle:
@@ -2012,7 +2014,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862478920
 GameObject:
@@ -2107,7 +2109,7 @@ RectTransform:
   - {fileID: 827610138}
   - {fileID: 1092690031}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

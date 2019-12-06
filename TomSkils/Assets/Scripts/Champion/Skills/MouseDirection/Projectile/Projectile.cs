@@ -41,7 +41,6 @@ namespace TomSkills
         private void OnTriggerEnter(Collider other)
         {
             triggerEvent.Other = other;
-            Debug.Log("Raise Event");
 
             eventSystem?.RaiseEvent<Events.OnTriggerEnterEvent>(triggerEvent);
         }
