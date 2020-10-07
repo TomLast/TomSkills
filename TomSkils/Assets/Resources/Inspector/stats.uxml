@@ -1,6 +1,0 @@
-<UXML xmlns:ui="UnityEngine.UIElements" xmlns:ue="UnityEditor.UIElements">
-  <ui:VisualElement name="row" class="container">
-    <ui:Label text="Bound" />
-    <ue:PropertyField binding-path="StatValues" name ="Stat Values"/>
-  </ui:VisualElement>
-</UXML>

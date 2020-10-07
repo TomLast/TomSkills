@@ -78,8 +78,17 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -95,6 +104,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/GitHub/TomSkills/TomSkils/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
